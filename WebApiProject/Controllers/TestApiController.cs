@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using WebApiProject.Models;
 
 namespace WebApiProject.Controllers
@@ -13,10 +14,16 @@ namespace WebApiProject.Controllers
     [ApiController]
     public class TestApiController : ControllerBase
     {
-
-        [HttpPost("PostValues")]
-        public IActionResult CreateString(Company company)
+        private ILogger<TestApiController> logger;
+        public TestApiController(ILogger<TestApiController> logger)
         {
+            this.logger = logger;
+        }
+
+        [HttpGet("PostValues")]
+        public IActionResult CreateString()
+        {
+            logger.LogWarning("SomeInfo from TestApiController");
             return Ok("some string");
         }
     }
