@@ -29,16 +29,7 @@ namespace WebApiProject.Controllers
         [HttpGet("GetAllStudents")]
         public IEnumerable <Student> GetAllStudent()
         {
-
-
-
             var companies = db.Companies.Include("Users").ToList();
-            var value = 0;
-
-
-
-
-
             IEnumerable<Student> students = studentRepository.Students;
             return students;
         }

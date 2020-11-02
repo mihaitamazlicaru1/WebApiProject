@@ -32,6 +32,7 @@ namespace WebApiProject
             services.AddControllers();
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration["Data:CrudDbConntection:ConnectionString"]));
             services.AddTransient<IStudent, StudentRepository>();
+            services.AddTransient<IEmployee, EmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

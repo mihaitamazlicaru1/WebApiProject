@@ -10,14 +10,11 @@ namespace WebApiProject.Repositories
 {
     public class EmployeeRepository : IEmployee
     {
-
         private readonly ApplicationContext context;
-
         public EmployeeRepository(ApplicationContext context)
         {
             this.context = context;
         }
-
         public IEnumerable<Employee> Employees
         {
             get

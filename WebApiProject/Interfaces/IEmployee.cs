@@ -6,7 +6,7 @@ using WebApiProject.Models;
 
 namespace WebApiProject.Interfaces
 {
-   public interface IEmployee
+    public interface IEmployee
     {
         IEnumerable<Employee> Employees { get; }
     }
