@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,5 +19,8 @@ namespace WebApplication1.Models
         public string City { get; set; }
 
         public string Country { get; set; }
+
+        public byte[] Image { set; get; }
+
     }
 }

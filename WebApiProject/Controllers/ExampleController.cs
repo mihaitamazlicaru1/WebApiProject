@@ -36,7 +36,7 @@ namespace WebApiProject.Controllers
 
 
         [HttpPost("PostEmployee")]
-        public IActionResult PostEmployee(Employee employee)
+        public IActionResult PostEmployee([FromBody] Employee employee)
         {
             return Ok();
         }
