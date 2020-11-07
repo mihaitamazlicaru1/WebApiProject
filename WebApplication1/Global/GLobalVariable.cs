@@ -37,6 +37,8 @@ namespace WebApplication1.GlobalVariables
             catch (Exception ex)
             {
                 string error = ex.Message.ToString();
+
+                //error classs hnadler
             }
             return empViewModel;
         }
